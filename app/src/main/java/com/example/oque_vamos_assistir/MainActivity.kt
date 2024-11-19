@@ -80,7 +80,6 @@ fun Inicio() {
         else -> R.drawable.aventura
     }
 
-
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -102,21 +101,17 @@ fun Inicio() {
             modifier = Modifier
                 .clip(shape = RoundedCornerShape(10.dp))
                 .padding(horizontal = 14.dp)
-                .padding(top = 44.dp)
-                .padding(bottom = 44.dp)
+                .padding(top = 40.dp)
+                .padding(bottom = 40.dp)
         )
-
 
         Text(
             text = choose,
             color = Color.White,
             fontSize = 40.sp,
-            modifier = Modifier.padding(bottom = 38.dp)
-                .padding(top =  10.dp),
+            modifier = Modifier.padding(bottom = 40.dp),
             fontFamily = FontFamily(Font(R.font.jockey_one))
         )
-
-
 
         Button(
             onClick = { random = (1..8).random() },
@@ -131,14 +126,14 @@ fun Inicio() {
             Text(
                 text = "Sortear",
                 fontSize = 40.sp,
-                fontFamily = FontFamily(Font(R.font.jockey_one))
+                fontFamily = FontFamily(Font(R.font.jockey_one)),
+                color = Color.White
             )
         }
 
         Spacer(modifier = Modifier.height(64.dp))
     }
 }
-
 
 @Preview
 @Composable
